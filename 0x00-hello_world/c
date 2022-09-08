@@ -732,7 +732,7 @@ extern int __overflow (FILE *, int);
 # 7 "0-main.c"
 int main (void)
 {
-
+ printf("Alx School");
  return (0);
 
 }
