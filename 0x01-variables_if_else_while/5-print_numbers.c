@@ -3,12 +3,10 @@
  * main - Entry point
  * Return:Always 0 (Success)
  */
-int main(void)
+int main()
 
 {
 	int num = 0;
-
-	int newLine = '\n';
 
 	for (num = 0; num < 10; num++)
 	{
