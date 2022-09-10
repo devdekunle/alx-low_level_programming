@@ -4,13 +4,13 @@
  * main - Entry point
  * Return: 0
  */
-int main()
+int main(void)
 
 {
 	int num1 = 0;
 
 	int newLine = '\n';
-	
+
 	while (num1 < 10)
 	{
 		putchar(48 + num1);
@@ -23,5 +23,5 @@ int main()
 	num1++;
 	}
 	putchar(newLine);
-	return (0);	
+	return (0);
 }
