@@ -6,6 +6,7 @@
 int main(void)
 {
 	int num1, num2;
+	int newLine = '\n';
 
 	num1 = 0;
 	while (num1 <= 9)
@@ -17,14 +18,18 @@ int main(void)
 			{
 				putchar('0' + num1);
 				putchar('0' + num2);
-				putchar(',');
-				putchar(' ');
+				if (num1 + num2 != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		num2++;
 
 		}
 	num1++;
 	}
+	putchar(newLine);
 	return (0);
 
 
