@@ -25,8 +25,10 @@ int main(void)
 				putchar(y % 10 + '0');
 
 				if (x * 100 + y != 9899)
+				{
 					putchar(',');
 					putchar(' ');
+				}
 
 			}
 			y++;
