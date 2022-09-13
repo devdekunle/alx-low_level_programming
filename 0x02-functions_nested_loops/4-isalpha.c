@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 /**
  * _isalpha -chekc if character is alpha
  * @c: character to check case
