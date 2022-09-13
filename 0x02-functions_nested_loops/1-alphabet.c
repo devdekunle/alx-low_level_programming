@@ -7,12 +7,10 @@
 int main(void)
 
 {
-	char bgn = 'a';
-
-	char lstn = 'z';
+	char letter = 'a';
 
 	int i = 0;
-	while (bgn <= lstn)
+	while (letter <= 'z')
 	{
 		_putchar(i);
 		i++;
