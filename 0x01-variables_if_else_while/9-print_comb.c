@@ -13,7 +13,7 @@ int main(void)
 
 	while (num1 < 10)
 	{
-		putchar(48 + num1);
+		putchar(num1 + '0');
 
 		if (num1 != 9)
 		{
