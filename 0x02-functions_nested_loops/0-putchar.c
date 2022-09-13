@@ -7,8 +7,8 @@
 int main(void)
 {	
 	int i = 0;
-	char ch[9] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r', '\0' };
-	while (i < 9)
+	char ch[9] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
+	while (i < 8)
 	{
 		_putchar(ch[i]);
 		i++;
