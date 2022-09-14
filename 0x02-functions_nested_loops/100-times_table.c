@@ -15,18 +15,26 @@ void print_times_table(int n)
 			for (j = 0; j <= n; j++)
 			{
 				num = i * j;
-				if (num == 0)
+				if (j == 0)
 				{
 					_putchar(num + '0');
 				}
-				else if (num >= 10)
+				else if (num < 100)
 				{
 					_putchar(num / 10 + '0');
 					_putchar(num % 10 + '0');
 				}
-				else if  (num > 0 && num < 10)
+				else if  (num < 10)
 				{	_putchar(' ');
+					_putchar(' ');
 					_putchar(num + '0');
+				}
+				else 
+				{
+					_putchar(num /100 + '0');
+					_putchar((num - 100) / 10 + '0');
+					_putchar(num % 10 + '0');
+				
 				}
 				if (j < n)
 				{
