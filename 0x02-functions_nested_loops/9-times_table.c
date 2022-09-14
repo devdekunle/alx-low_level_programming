@@ -30,15 +30,16 @@ void times_table(void)
 				_putchar(num + '0');
 			}
 
-			if (num != 81)
+			if (i != 9)
 			{
 				_putchar(',');
 				_putchar(' ');
 			}
+			putchar('\n');
 			j++;
 		}
 		i++;
 	}
-	_putchar('\n');
+
 
 }
