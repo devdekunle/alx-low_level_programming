@@ -5,22 +5,22 @@
  * @n: number to check
  * Return: 0 or 1
  */
-int print_to_98(int n)
+void print_to_98(int n)
 {
 
 	while (n < 98)
 	{
 
 		printf("%i, ", n);
-		i++;
+		n++;
 	}
 	while (n > 98)
 	{
 
-		printf("%i, ", n)
+		printf("%i, ", n);
 		n--;
 	}
 
 	printf("98");
-	printf('\n');
+	putchar('\n');
 }
