@@ -1,0 +1,26 @@
+#include "main.h"
+#include<stdio.h>
+/**
+ * print_to_98 - print natural numbers
+ * @n: number to check
+ * Return: 0 or 1
+ */
+int print_to_98(int n)
+{
+
+	while (n < 98)
+	{
+
+		printf("%i, ", n);
+		i++;
+	}
+	while (n > 98)
+	{
+
+		printf("%i, ", n)
+		n--;
+	}
+
+	printf("98");
+	printf('\n');
+}
