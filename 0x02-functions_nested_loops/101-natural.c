@@ -4,7 +4,7 @@
  * print_natural -  to print multiples multiples of 3 and 5
  *
  */
-void print_natural(void)
+int main(void)
 {
 	int i, sum;
 
