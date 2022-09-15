@@ -1,7 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_natural -  to print multiples multiples of 3 and 5
+ * main - Entry
+ * Return: 0
  *
  */
 int main(void)
@@ -21,5 +22,5 @@ int main(void)
 
 	}
 	printf("%d\n", sum);
-
+	return (0);
 }
