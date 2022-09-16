@@ -27,14 +27,14 @@ int main(void)
 
 			printf("Buzz");
 		}
-		else 
+		else
 			printf("%i", i);
 
 		if (i != 100)
 		{
 			putchar(' ');
 
-		}	
+		}
 		i++;
 	}
 	putchar('\n');
