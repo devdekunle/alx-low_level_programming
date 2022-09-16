@@ -6,11 +6,11 @@
 
 void more_numbers(void)
 {
-	int i;
+	int i = 0;
 
 	char num, num2;
 
-	while (i <= 10)
+	while (i < 10)
 	{
 		num = 0;
 		while (num <= 14)
