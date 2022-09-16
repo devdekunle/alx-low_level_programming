@@ -3,6 +3,7 @@
 
 void print_line(int n);
 void print_diagonal(int n);
+void print_square(int size);
 int _putchar(char);
 int _isupper(int c);
 int _isdigit(int c);
