@@ -7,7 +7,7 @@
 void print_rev(char *s)
 {
 	int i;
-	int lastChar;
+
 
 	for (i = 0; s[i]; i++)
 	{
@@ -15,7 +15,8 @@ void print_rev(char *s)
 
 	while (i--)
 	{
-		_putchar(s[i])
+		_putchar(s[i]);
 
 	}
+	_putchar('\n');
 }
