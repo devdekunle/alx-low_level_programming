@@ -11,7 +11,7 @@ int _atoi(char *s)
 
 	for (startVal = 0; !(s[startVal] >= 48 && s[startVal] <= 57); startVal++)
 	{
-		if (s[startVal] == "-")
+		if (s[startVal] == '-')
 		{
 			sign = sign * -1;
 		}
