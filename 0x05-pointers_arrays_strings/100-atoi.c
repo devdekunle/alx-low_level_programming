@@ -17,7 +17,7 @@ int _atoi(char *s)
 		}
 	}
 
-	for (i = startVal; (s[i] >= 48 && s[i] <= 57); i++)
+	for (i = 0; (s[i] >= 48 && s[i] <= 57); i++)
 	{
 
 		num = num * 10 + (s[i] - 48);
