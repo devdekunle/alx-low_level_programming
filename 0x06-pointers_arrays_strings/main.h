@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+int _strcmp(char *s1, char *s2);
 char *_strncat(char *dest, char *src, int n);
 char *_strcat(char *dest, char *src);
 void reset_to_98(int *n);
