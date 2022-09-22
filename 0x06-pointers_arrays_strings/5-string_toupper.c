@@ -1,26 +1,26 @@
 #include "main.h"
 /**
 *string_toupper - change string to upper case
-*@n: string to change
+*@str: string to change
 *Return: char
 */
 
-char *string_toupper(char *n)
+char *string_toupper(char *str)
 {
-	int cap = 'a' - 'A';
+	int alphaRng = 'a' - 'A';
 	int i = 0;
 
-	for (i = 0; *(n + i); i++)
+	for (i = 0; str[i]; i++)
 	{
-		if (n >= 'a' && n <= 'z')
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			*(n + i) -= cap;
+			str[i] -= alphaRng;
 
 
 		}
 
 
 	}
-	return (n);
+	return (str);
 
 }
