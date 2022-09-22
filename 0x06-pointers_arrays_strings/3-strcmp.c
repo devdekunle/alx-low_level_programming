@@ -10,7 +10,7 @@ int _strcmp(char *s1, char *s2)
 {
 	int i;
 
-	for (i = 0; *(s1 + i) || *(s2 + i); ++i)/*check if neither s1 nor s2 has reached null byte*/
+	for (i = 0; *(s1 + i) || *(s2 + i); ++i) /*check for null byte*/
 	{
 		if (*(s1 + i) != *(s2 + i))
 		{
