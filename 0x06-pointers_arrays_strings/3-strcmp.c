@@ -10,27 +10,14 @@ int _strcmp(char *s1, char *s2)
 {
 	int i, flag;
 
-	for (i = 0; *(s1 + i) != '\0' || *(s2 + i) != '\0'; i++)
+	for (i = 0; *(s1 + i) || *(s2 + i); ++i)/*check if neither s1 nor s2 has reached null byte*/
 	{
-		if (*(s1 + i) == *(s2 + i))
+		if (*(s1 + i) != *(s2 + i))
 		{
-
-			flag = 0;
-			break;
+			return (*(s1 + i) - *(s2 + i));
 		}
-		else if (*(s1 + i) < *(s2 + i))
-		{
 
-			flag = -1;
-			break;
-
-		}
-		else if (*(s1 + i) > *(s2 + i))
-		{
-			flag = 1;
-			break;
-		}
 	}
-		return (flag);
+		return (0);
 
 }
