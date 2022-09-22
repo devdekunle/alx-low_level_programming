@@ -25,9 +25,10 @@ int _strcmp(char *s1, char *s2)
 			break;
 
 		}
-		else
+		else if (*(s1 + i) > *(s2 + i))
 		{
 			flag = 1;
+			break;
 		}
 	}
 		return (flag);
