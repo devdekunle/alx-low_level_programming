@@ -9,7 +9,7 @@ char *rot13(char *str)
 {
 	int i;
 	/*iterate through string and also check if character is an alphabet*/
-	for (i = 0; str[i]; ++i)
+	for (i = 0; str[i] != '\0'; ++i)
 	{
 
 		for (i = 0; (str[i] >= 'a' && str[i] <= 'z') ||
