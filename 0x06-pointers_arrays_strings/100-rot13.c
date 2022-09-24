@@ -10,7 +10,7 @@ char *rot13(char *str)
 	int i;
 	/*iterate through string and also check if character is an alphabet*/
 	for (i = 0; str[i], (str[i] >= 'a' && str[i] <= 'z') ||
-	(str[i] >= 'A' && str[i] <= 'Z' ++i))
+	(str[i] >= 'A' && str[i] <= 'Z'); ++i))
 	{
 
 		/*check if character is between first 13 characters*/
