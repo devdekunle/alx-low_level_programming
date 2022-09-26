@@ -19,7 +19,7 @@ char *_memset(char *s, char b, unsigned int n)
 			_putchar(" ");
 		if (!(i % 10) && i)
 			_putchar('\n');
-		*(s + i) = 'b';
+		*(s + i) = b;
 
 	}
 	_putchar('\n');
