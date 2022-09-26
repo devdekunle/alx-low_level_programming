@@ -1,5 +1,4 @@
 #include "main.h"
-#include "_putchar.c"
 /**
 * _memset - fill buffer with character
 *@s: pointer to memory to be filled
