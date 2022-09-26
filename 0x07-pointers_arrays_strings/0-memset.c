@@ -1,4 +1,5 @@
 #include "main.h"
+#include "_putchar.c"
 /**
 * _memset - fill buffer with character
 *@s: pointer to memory to be filled
@@ -16,10 +17,11 @@ char *_memset(char *s, char b, unsigned int n)
 	{
 
 		if (i % 10)
-			_putchar(" ");
+			_putchar(' ');
 		if (!(i % 10) && i)
 			_putchar('\n');
 		*(s + i) = b;
+		_putchar(*(s + i));
 
 	}
 	_putchar('\n');
