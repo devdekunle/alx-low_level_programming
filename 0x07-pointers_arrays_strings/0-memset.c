@@ -15,12 +15,7 @@ char *_memset(char *s, char b, unsigned int n)
 	for (i = 0; i < n; i++)
 	{
 
-		if (i % 10)
-			_putchar(' ');
-		if (!(i % 10) && i)
-			_putchar('\n');
 		*(s + i) = b;
-		_putchar(*(s + i));
 
 	}
 	_putchar('\n');
