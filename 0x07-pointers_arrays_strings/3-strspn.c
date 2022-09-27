@@ -8,19 +8,19 @@
 */
 
 unsigned int _strspn(char *s, char *accept)
-{	
+{
 	int i;
-	
+
 	int numAccept = _strlen(accept) + 1;
 
 	for (i = 0; *(s + i); i++)
 	{
 		if (i + 1 == numAccept)
-			return (i + 1);
+			break;
 
 
 	}
-
+	return(i + 1);
 
 
 }
