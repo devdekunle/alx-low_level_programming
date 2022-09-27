@@ -16,7 +16,7 @@ char *_strpbrk(char *s, char *accept)
 		for (j = 0; *(accept + j); j++)
 		{
 			/*if match is found, return address of first instance of match*/
-			if (*(s + i) == *(accept + i))
+			if (*(s + i) == *(accept + j))
 			{
 
 				return (s + i);
