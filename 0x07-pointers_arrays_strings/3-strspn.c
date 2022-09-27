@@ -9,18 +9,25 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int i;
+	int i, j, count = 0;
+	
 
-	int numAccept = _strlen(accept) + 1;
-
-	for (i = 0; *(s + i); i++)
+	for (i = 0; *(s + i ) >= '\0'; i++)
 	{
-		if (i + 1 == numAccept)
+		for (j = 0; *(accept + j) > '\0'; j++)
+		{
+			if (*(s + i) == *(accept + j))
+			{
+				count++;
+				break;
+
+			}
+
+
+		}
+		if (*(accept + j) == '\0')
 			break;
-
-
 	}
-	return(i + 1);
-
+	return (count);
 
 }
