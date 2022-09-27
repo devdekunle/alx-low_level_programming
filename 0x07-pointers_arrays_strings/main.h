@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+void print_diagsums(int *a, int size);
 int _putchar(char);
 char *_strstr(char *haystack, char *needle);
 char *_memcpy(char *dest, char *src, unsigned int n);
