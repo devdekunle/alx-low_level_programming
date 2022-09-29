@@ -28,6 +28,6 @@ int _squareRoot(int n, int num)
 	else if (num * num > n) /*num greater than n cannot give square root*/
 
 		return (-1);
-	else 
+	else
 		return (_squareRoot(n, num + 1));
 }
