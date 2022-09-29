@@ -5,7 +5,7 @@
 *Return: 1 or 0
 */
 int is_prime_number(int n)
-{	
+{
 	return(_primeNum(n, 2));
 
 }
@@ -15,7 +15,7 @@ int is_prime_number(int n)
 *_primeNum - check prime number
 *@n: number 1
 *@num: number 2
-*Return: prime 
+*Return: prime
 */
 
 int _primeNum(int n, int num)
@@ -26,6 +26,6 @@ int _primeNum(int n, int num)
 	else if (n % num == 0 || n <= 1)
 
 		return (0);
-	else 
+	else
 		return (_primeNum(n, num + 1));
 }
