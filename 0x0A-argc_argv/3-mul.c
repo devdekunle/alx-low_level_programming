@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	
-	firstNumber = atoi(argv[1]);
+	firstNum = atoi(argv[1]);
 	secondNum = atoi(argv[2]);
 	result = firstNum * secondNum;
 
