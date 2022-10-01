@@ -25,7 +25,7 @@ return (0);
 */
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
+	int sum = 0;
 
 	while (--argc)
 	{
