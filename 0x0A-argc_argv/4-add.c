@@ -9,6 +9,7 @@
 int checkInteger(char *s)
 {
 	int i;
+
 	for (i = 0; *(s + i); i++)
 	{
 		/*check that string is not a digit*/
