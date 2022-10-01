@@ -6,9 +6,9 @@
 *Return: 0
 */
 
-int main(int __attribute__((__unused__))argc, char *argv[])
+int main(int argc, char __attribute__((__unused__)) *argv[])
 {
-	printf("%d\n", aargc - 1);
+	printf("%d\n", argc - 1);
 	return (0);
 
 }
