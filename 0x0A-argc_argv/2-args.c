@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
-*main - Entry
-*@argc: number of arguments
+*main - Entry point
+*@argc: number of arguments passed
 *@argv: pointer array to arguemnts
 *Return: 0
 */
