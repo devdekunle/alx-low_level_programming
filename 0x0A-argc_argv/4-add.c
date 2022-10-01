@@ -8,7 +8,8 @@
 */
 int checkInteger(char *s)
 {
-	for (int i = 0; *(s + i); i++)
+	int i;
+	for (i = 0; *(s + i); i++)
 	{
 		/*check that string is not a digit*/
 		if (*(s + i) < 48 || *(s + i) > 57)
