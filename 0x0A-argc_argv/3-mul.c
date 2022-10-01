@@ -6,7 +6,7 @@
 *@argv: pointer
 *Return: 0 or 1
 */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int firstNum, secondNum, result;
 
@@ -16,8 +16,8 @@ int main(int argc, char* argv[])
 		return (1);
 	}
 	
-	firstNumber = atoi(argv[0]);
-	secondNum = atoi(argv[1]);
+	firstNumber = atoi(argv[1]);
+	secondNum = atoi(argv[2]);
 	result = firstNum * secondNum;
 
 	printf("%d\n", result);
