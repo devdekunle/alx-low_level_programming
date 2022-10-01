@@ -1,20 +1,14 @@
 #include <stdio.h>
 /**
-*main - Entry
-*@argc: number of arguments
-*@argv: pointer array to arguemnts
+*main - entry
+*@argc: number of arguements
+*@argv: pointer
 *Return: 0
 */
-int main(int argc, char *argv[])
 
+int main(int __attribute__((__unused__))argc, char *argv[])
 {
-	int i;
-	for (i = 0; i < argc; i++)
-	{
-		printf("%s\n", argv[i]);
-
-	}
+	printf("%d\n", aargc - 1);
 	return (0);
-
 
 }
