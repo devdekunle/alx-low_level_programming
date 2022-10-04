@@ -20,15 +20,14 @@ char *str_concat(char *s1, char *s2)
 	strCat = (char *)malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
 	if (strCat != NULL)
 	{
-		for(i = 0; i < _strlen(s1); i++)
+		for (i = 0; i < _strlen(s1); i++)
 		{
 			*(strCat + i) = *(s1 + i);
 
 		}
-		for (j = 0; j < _strlen(s2); j++)
+		for (j = 0; j < _strlen(s2); i++, j++)
 		{
-			*(strCat + _strlen(strCat) + j) = *(s2 + j);
-
+			*(strCat + i) = *(s2 + j);
 		}
 
 		return (strCat);
