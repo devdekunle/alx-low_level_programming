@@ -13,11 +13,13 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
+	/*allocate memory based on size of str*/
 
 	ptrStrDup = (char *)malloc(_strlen(str) + 1  * sizeof(char));
 
+	/*if returned pointer is not null and memory was allocated*/
 	if (ptrStrDup != NULL)
-	{
+	{	/*assign each character of str to ptrStrDup*/
 		for (i = 0; *(str + i); i++)
 
 		{
