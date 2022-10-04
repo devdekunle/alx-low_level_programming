@@ -25,15 +25,13 @@ char *str_concat(char *s1, char *s2)
 			*((strCat + i)) = *(s1 + i);
 
 		}
-		for (j =  0; *(s2 + i) != '\0'; i++)
+		for (j =  0; *(s2 + j) != '\0'; j++)
 		{
 			*(strCat + (_strlen(strCat) + j)) = *(s2 + j);
 
 		}
 		*(strCat + j) = '\0';
 		return (strCat);
-
-
 	}
 	else
 	{
