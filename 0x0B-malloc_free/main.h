@@ -1,6 +1,6 @@
 #define MAIN_H
 #ifndef MAIN_H
-
+int **alloc_grid(int width, int height);
 char *create_array(unsigned int size, char c);
 int _putchar(char);
 char *_strdup(char *str);a
