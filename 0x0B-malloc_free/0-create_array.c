@@ -14,16 +14,18 @@ char *create_array(unsigned int size, char c)
 
 	if (size == 0)
 		return (NULL);
+	/*allocate memory for requested size*/
 	ptr = (char *)malloc(size * sizeof(char));
-
+	/*if memory is sucessfully allocated, fill memory with c*/
 	if (ptr != NULL)
 	{
 		for (i = 0; i < size; i++)
 
 			*(ptr + i) = c;
-
+	/*return pointer to the first byte of the memory location*/
 		return (ptr);
 	}
+	/*if memory is not allocated*/
 	else
 		return (NULL);
 
