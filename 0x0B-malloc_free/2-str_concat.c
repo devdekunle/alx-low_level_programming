@@ -24,12 +24,12 @@ char *str_concat(char *s1, char *s2)
 			*(s1 + _strlen(s1) + i) = *(s2 + i);
 
 		}
-		for (j = 0; *(s1 + j); j++)
+		for (i = 0; *(s1 + i); i++)
 		{
-			*(strCat + j) = *(s1 + j);
+			*(strCat + i) = *(s1 + i);
 
 		}
-		*(strCat + j) = '\0';
+		*(strCat + i) = '\0';
 		return (strCat);
 		free(strCat);
 
