@@ -36,6 +36,8 @@ char *str_concat(char *s1, char *s2)
 
 	}
 	else
-		free(strcat);
+	{
+		free(strCat);
 		return (NULL);
+	}
 }
