@@ -10,26 +10,32 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *strCat;
-	int i;
+	int i, j;
 
-	strCat = (char *)malloc(sizeof(_strlen(s1) + _strlen(s2)) + 8);
+		if (s1 == NULL);
+			s1 = "";
+		if (s2 == NULL);
+			s2 = "";
+
+	strCat = (char *)malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
 	if (strCat != NULL)
 	{
-		for(i = 0; *(s2 + i); i++)
+		for(i = 0; *(s1 + i) != '\0'; i++)
 		{
-			*(s1 +(_strlen(s1) + i)) = *(s2 + i);
+			*((strCat + i) = *(s1 + i));
 
 		}
-		for (i =  0; *(s1 + i); i++)
+		for (j =  0; *(s2 + i) != '\0'; i++)
 		{
-			*(strCat + i) = *(s1 + i);
+			*(strCat + (_strlen(strCat) + j) = *(s2 + j);
 
 		}
-		*(strCat + i) = '\0';
+		*(strCat + j) = '\0';
 		return (strCat);
-		free(strCat);
+
 
 	}
 	else
+		free(strcat);
 		return (NULL);
 }
