@@ -16,7 +16,7 @@ char *str_concat(char *s1, char *s2)
 	{
 
 	}
-	strCat = (char *)malloc((sizeof(s1) + sizeof(s2) + 1));
+	strCat = (char *)malloc((sizeof(s1) + sizeof(s2) + 8));
 	if (strCat != NULL)
 	{
 		for(i = 0; *(s2 + i); i++)
