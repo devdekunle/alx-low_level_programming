@@ -4,5 +4,5 @@
 char *create_array(unsigned int size, char c);
 int _putchar(char);
 char *_strdup(char *str);a
-int _strln(char *s);
+int _strlen(char *s);
 #endif
