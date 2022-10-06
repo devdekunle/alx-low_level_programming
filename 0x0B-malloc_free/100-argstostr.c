@@ -13,7 +13,9 @@ char *argtostr(int ac, char **av)
 	int i, j, k, l, strLen = 0;
 	char *stringPtr = NULL;
 
-	if (ac == NULL || av == NULL)
+	if (ac == NULL)
+		return (NULL);
+	if (av == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 		strLen += _strlen(av[i]);
