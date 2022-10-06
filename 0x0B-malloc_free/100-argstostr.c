@@ -33,7 +33,7 @@ char *argstostr(int ac, char **av)
 				stringPtr[l] = av[j][k];
 				l++;
 			}
-			stringPtr[l] = '\n';
+			stringPtr[l] = "\n";
 		}
 
 		return (stringPtr);
