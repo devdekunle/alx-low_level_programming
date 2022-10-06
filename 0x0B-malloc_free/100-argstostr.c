@@ -17,15 +17,18 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	if (av == NULL)
 		return (NULL);
+		/*get total length od strings in pointer array*/
 	for (i = 0; i < ac; i++)
 	{
 		strLen += _strlen(av[i]);
 	}
+	/*allocate memory block based on string length*/
 	stringPtr = malloc(sizeof(char) * (strLen + 1) + ac);
 
 
 	if (stringPtr != NULL)
 	{
+		/*copy all characters from each array to stringPtr*/
 		for (j = 0; j < ac; j++)
 		{
 			for (k = 0; av[j][k]; k++)
@@ -34,6 +37,7 @@ char *argstostr(int ac, char **av)
 				l++;
 			}
 			stringPtr[l] = '\n';
+			l++;
 		}
 
 		return (stringPtr);
