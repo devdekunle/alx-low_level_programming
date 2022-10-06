@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
 #include "2-strlen.c"
-#include "0-strcat.c"
 /**
 *argtostr - concatenate strings in an array of pointers
 *@ac: argument count
@@ -10,7 +9,7 @@
 */
 char *argtostr(int ac, char **av)
 {
-	int i, j, k, l, strLen = 0;
+	int i, j, k, strLen = 0;
 	char *stringPtr = NULL;
 
 	if (ac == NULL)
@@ -18,17 +17,22 @@ char *argtostr(int ac, char **av)
 	if (av == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
+	{
 		strLen += _strlen(av[i]);
-	for (j = 0; j < ac; j++)
-		for (k = 0; *(av + k); k++)
-			*(av + _strlen((av[k]))) = '\n';
-	stringPtr = malloc(sizeof(char) * (strLen + 1) + ac);
+	}
+	stringPtr = malloc(sizeof(char) * (strLen + 1));
 
 
 	if (stringPtr != NULL)
 	{
-		for (l = 0; l < ac; l++)
-			stringPtr = _strcat(stringPtr, (av + l));
+		for (j = 0; j < ac; j++)
+		{
+			for (k = 0; av[j][k]; k++)
+			{
+				stringPtr[k] = av[j][k];
+			}
+			stringPtr[k] = '\n';
+		}
 
 		return (stringPtr);
 	}
