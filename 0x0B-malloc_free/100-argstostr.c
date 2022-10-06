@@ -16,17 +16,17 @@ char *argtostr(int ac, char **av)
 	if (ac == NULL || av == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
-		strLen += _strlen(av + i);
+		strLen += _strlen(av[i]);
 	for (j = 0; j < ac; j++)
 		for (k = 0; *(av + k); k++)
-			*(av + _strlen((av + k))) = '\n';
+			*(av + _strlen((av[k]))) = '\n';
 	stringPtr = malloc(sizeof(char) * (strLen + 1) + ac);
 
 
 	if (stringPtr != NULL)
 	{
 		for (l = 0; l < ac; l++)
-			str_concat(stringPtr, (av + l));
+			stringPtr = str_concat(stringPtr, (av + l));
 
 		return (stringPtr);
 	}
