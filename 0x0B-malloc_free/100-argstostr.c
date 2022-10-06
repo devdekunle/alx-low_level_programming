@@ -9,8 +9,8 @@
 */
 char *argstostr(int ac, char **av)
 {
-	int i, j, k;
-	int l = strLen = 0;
+	int i, j, k, strLen = 0;
+	int l = 0;
 	char *stringPtr = NULL;
 
 	if (ac == '\0')
