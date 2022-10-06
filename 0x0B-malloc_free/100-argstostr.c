@@ -26,7 +26,7 @@ char *argtostr(int ac, char **av)
 	if (stringPtr != NULL)
 	{
 		for (l = 0; l < ac; l++)
-			stringPtr = str_concat(stringPtr, (av + l));
+			stringPtr = str_cat(stringPtr, (av + l));
 
 		return (stringPtr);
 	}
