@@ -2,14 +2,15 @@
 #include <stdlib.h>
 #include "2-strlen.c"
 /**
-*argtostr - concatenate strings in an array of pointers
+*argstostr - concatenate strings in an array of pointers
 *@ac: argument count
 *@av: argument vector
 *Return: pointer to concatenated string
 */
 char *argstostr(int ac, char **av)
 {
-	int i, j, k, strLen = 0;
+	int i, j, k;
+	int l = strLen = 0;
 	char *stringPtr = NULL;
 
 	if (ac == '\0')
@@ -29,9 +30,10 @@ char *argstostr(int ac, char **av)
 		{
 			for (k = 0; av[j][k]; k++)
 			{
-				stringPtr[k] = av[j][k];
+				stringPtr[l] = av[j][k];
+				l++
 			}
-			stringPtr[k] = '\n';
+			stringPtr[l] = '\n';
 		}
 
 		return (stringPtr);
