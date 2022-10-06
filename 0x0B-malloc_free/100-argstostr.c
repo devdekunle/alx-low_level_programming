@@ -7,7 +7,7 @@
 *@av: argument vector
 *Return: pointer to concatenated string
 */
-char *argtostr(int ac, char **av)
+char *argstostr(int ac, char **av)
 {
 	int i, j, k, strLen = 0;
 	char *stringPtr = NULL;
