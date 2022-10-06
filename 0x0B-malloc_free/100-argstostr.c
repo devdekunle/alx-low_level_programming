@@ -31,7 +31,7 @@ char *argstostr(int ac, char **av)
 			for (k = 0; av[j][k]; k++)
 			{
 				stringPtr[l] = av[j][k];
-				l++
+				l++;
 			}
 			stringPtr[l] = '\n';
 		}
