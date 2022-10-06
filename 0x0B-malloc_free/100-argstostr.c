@@ -12,7 +12,7 @@ char *argtostr(int ac, char **av)
 	int i, j, k, strLen = 0;
 	char *stringPtr = NULL;
 
-	if (ac == NULL)
+	if (ac == '\0')
 		return (NULL);
 	if (av == NULL)
 		return (NULL);
