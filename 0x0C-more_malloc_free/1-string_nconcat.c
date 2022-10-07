@@ -11,22 +11,25 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *strCat;
-	unsigned int i, j;
+	unsigned int i, j, len1, len2;
 
 		/*if string is NULL, convert it to an empty string*/
 		if (s1 == NULL)
 			s1 = "";
 		if (s2 == NULL)
 			s2 = "";
-		if (n >= _strlen(s2))
-			n = _strlen(s2);
+		len1 = _strlen(s1);
+		len2 = _strlen(s2);
+		if (n >= len2)
+			n = len2;
+
 
 	/*allocate new memory based on size of s1 and s2*/
-	strCat = (char *)malloc(sizeof(char) * (_strlen(s1) + n + 1));
+	strCat = (char *)malloc(sizeof(char) * (len1 + n + 1));
 
 	if (strCat != NULL)
 	{	/*copy each character from s1 to strCat*/
-		for (i = 0; i < _strlen(s1); i++)
+		for (i = 0; i < len1; i++)
 		{
 			*(strCat + i) = *(s1 + i);
 
