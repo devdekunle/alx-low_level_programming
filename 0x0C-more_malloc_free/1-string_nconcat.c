@@ -2,12 +2,13 @@
 #include <stdlib.h>
 #include "2-strlen.c"
 /**
-*str_concat - Concatenate two strings
+*string_nconcat - Concatenate two strings
 *@s1: string 1
 *@s2: string 2
+*@n: number of bytes to copy
 *Return: poiner to concatenated string
 */
-char *str_nconcat(char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *strCat;
 	int i, j;
@@ -38,7 +39,7 @@ char *str_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	else
 	{	/*return NULL if allocation of memory fails*/
-	
+
 		return (NULL);
 	}
 }
