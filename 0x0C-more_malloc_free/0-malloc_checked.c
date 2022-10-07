@@ -1,5 +1,5 @@
 #include "main.h"
-#include<stdlib.h>
+#include <stdlib.h>
 /**
 *malloc_checked - check malloc status
 *@b: number of bytes size to allocate
