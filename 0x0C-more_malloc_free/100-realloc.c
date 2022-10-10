@@ -12,12 +12,12 @@
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 
-	char *nptr;
+	char *newPtr;
 	unsigned int i;
-
+	/*no change in size, previously allocated block stays same*/
 	if (new_size == old_size)
 		return (ptr);
-
+	/*condition for realloc() to act as free() and return null after freeing*/
 	if ((new_size == 0) && (ptr != NULL))
 	{
 		free(ptr);
@@ -25,23 +25,27 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 
 	}
+	/*condition for realloc() to act as malloc()*/
 	if (ptr == NULL)
 	{
-		nptr = malloc(new_size);
-		if (nptr == NULL)
+		newPtr = malloc(new_size);
+		if (newPtr == NULL)
 			return (NULL);
 	}
+	/*condition to reallocate previously allocated memory block */
 	if (new_size > old_size && (ptr != NULL))
 	{
 
-		nptr = malloc(new_size);
-		if (nptr == NULL)
-			return (nptr);
+		newPtr = malloc(new_size);
+		if (newPtr == NULL)
+			/*if reallocation fails return nptr*/
+			return (newPtr);
 		for (i = 0; i < old_size; i++)
-			nptr[i] = *((char *)ptr + 1);
+		/*typecasting done to enable dereferencing of void pointer */
+			newPtr[i] = *((char *)ptr + 1);
 		free(ptr);
 
 	}
-
-	return (nptr);
+	/*return adrdress of newly reallocated memory block*/
+	return (newPtr);
 }
