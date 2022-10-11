@@ -1,4 +1,4 @@
-#include "main.h"
+#include "dog.h"
 /**
 *_strlen - count string length
 *@s: pointer to string to count

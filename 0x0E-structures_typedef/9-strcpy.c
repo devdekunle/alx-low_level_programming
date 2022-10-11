@@ -1,4 +1,4 @@
-#include  "main.h"
+#include  "dog.h"
 /**
 * _strcpy - copy fromone array to another
 *@dest: destination of copy
