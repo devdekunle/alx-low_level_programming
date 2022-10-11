@@ -7,11 +7,13 @@
 *@name: name
 *@age: age
 *@owner: owner
+*Return: new_pup
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_pup;
 	int lenName, lenOwner;
+
 	if (name != NULL && owner != NULL)
 	{
 
@@ -27,7 +29,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		}
 		new_pup->name = _strcpy(new_pup->name, name);
 
-		new_pup->owner = malloc (lenOwner * sizeof(char));
+		new_pup->owner = malloc(lenOwner * sizeof(char));
 		if (new_pup->owner == NULL)
 		{
 			free(new_pup);
