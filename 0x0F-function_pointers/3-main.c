@@ -10,7 +10,7 @@
 */
 int main(int argc, char **argv)
 {
-	int (*math)(int, int);
+	int (*mathOpr)(int, int);
 	/*check if arguement is 4*/
 	if (argc != 4)
 	{
@@ -19,15 +19,15 @@ int main(int argc, char **argv)
 	}
 	/*check if operator symbol is correct by calling the get_op_func*/
 	/*and also get address of right function to use for operation*/
-	math = get_op_funct(argv[2]);
-	if (!math)
+	mathOpr = get_op_func(argv[2]);
+	if (!mathOpr)
 	{
 		printf("Error\n");
 		exit(99);
 
 	}
 	/*pass second and fourth arguement to function and print result*/
-	printf("%d\n", math(atoi(argv[1]), atoi(argv[3])));
+	printf("%d\n", mathOpr(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 
 

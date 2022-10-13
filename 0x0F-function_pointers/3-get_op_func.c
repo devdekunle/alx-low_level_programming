@@ -1,6 +1,6 @@
 #include "3-calc.h"
 #include <stdlib.h>
-#include <stdio.h>
+#include <string.h>
 /**
 *get_op_func - choose function to use
 *@s: operator passed
@@ -17,7 +17,7 @@ int (*get_op_func(char *s))(int, int)
 	{"/", op_div},
 	{"%", op_mod},
 	{NULL, NULL}
-	}
+	};
 	int i = 0;
 
 	while (i < 5)
@@ -25,7 +25,7 @@ int (*get_op_func(char *s))(int, int)
 		/*compare symbol of each struct with input and rturn address to*/
 		/*function to use*/
 		if (strcmp(s, ops[i].op) == 0)
-			return (ops[i].f)
+			return (ops[i].f);
 		i++;
 
 	}
