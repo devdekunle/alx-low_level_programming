@@ -1,22 +1,24 @@
 #include "main.h"
 #include "2-strlen.c"
 /**
-*binary_to_unit - convert binary to unsigned int
+*binary_to_uint - convert binary to unsigned int
 *@b: string of binary numbers to convert
 *Return: number
 */
 
-unsigned int binary_to_unit(const char *b)
+unsigned int binary_to_uint(const char *b)
 {
 	int len = _strlen(b);
 	int num = 0;
 	int i, decVal = 1;
 
-	if (b == NULL || b[i] != 0 || b[i] != 1 || b[i] < 0)
+	if (b == NULL)
 		return (0);
-	for (i = len - 1; i >= 0; i++)
+	for (i = (len - 1); i >= 0; i--)
 	{
-		if (b[i] == 1)
+		if (b[i] < 48 || b[i] > 49)
+			return (0);
+		if (b[i] == 49)
 			num += decVal;
 		decVal *= 2;
 

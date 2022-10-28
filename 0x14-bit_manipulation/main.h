@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
-
-unsigned int binary_to_int(const char *b);
-int _strlen(char *s);
+#include <stdlib.h>
+#include <stdio.h>
+unsigned int binary_to_uint(const char *b);
+int _strlen(const char *s);
 #endif
