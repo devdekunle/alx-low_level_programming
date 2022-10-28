@@ -10,7 +10,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	int num = 0;
 	int i, decVal = 1;
-	
+
 		if (b == NULL)
 			return (0);
 		for (i = (_strlen(b) - 1); i >= 0; i--)
@@ -24,4 +24,4 @@ unsigned int binary_to_uint(const char *b)
 		return (num);
 
 
-}	
+}
