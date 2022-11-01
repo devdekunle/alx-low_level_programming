@@ -11,13 +11,13 @@ int append_text_to_file(const char *filename, char *text_content)
 	int fd, buffLen;
 
 
+	if (!text_content)
+		return (-1);
 	if (!filename)
 		return (-1);
 		/*open file and set to append */
 	fd = open(filename, O_RDWR | O_APPEND);
 	if (fd < 0)
-		return (-1);
-	if (text_content == NULL)
 		return (-1);
 		/*count number of charcters to be appended to file*/
 	buffLen = _strlen(text_content);
