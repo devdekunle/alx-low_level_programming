@@ -13,8 +13,6 @@ int create_file(const char *filename, char *text_content)
 	ssize_t size_w;
 	size_t len;
 
-	x = _strlen(text_content);
-	len = x;
 
 	if (!(filename))
 		return (-1);
@@ -25,6 +23,9 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	if (!text_content)
 		return (1);
+	
+	x = _strlen(text_content);
+	len = x;
 
 	size_w = write(fileDes, text_content, len);
 
