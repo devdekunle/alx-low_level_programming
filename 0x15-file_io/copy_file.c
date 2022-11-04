@@ -19,7 +19,7 @@ int copy_file(char *file1, char *file2)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1);
 		exit(98);
 	}
-	fd2 = open(file2, O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, 00664);
+	fd2 = open(file2, O_RDWR | O_CREAT | O_TRUNC | O_APPEND, 00664);
 	if (fd2 < 0)
 	{
 		dprintf(STDERR_FILENO, "Can't write to %s\n", file2);
