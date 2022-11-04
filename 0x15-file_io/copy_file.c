@@ -14,12 +14,12 @@ int copy_file(char *file1, char *file2)
 	ssize_t size_r, size_w;
 
 	fd1 = open(file1, O_RDONLY);
+	fd2 = open(file2, O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, 00664);
 	if (fd1 < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1);
 		exit(98);
 	}
-	fd2 = open(file2, O_RDWR | O_CREAT | O_TRUNC | O_APPEND, 00664);
 	if (fd2 < 0)
 	{
 		dprintf(STDERR_FILENO, "Can't write to %s\n", file2);
@@ -49,13 +49,13 @@ int copy_file(char *file1, char *file2)
 	while (size_r != 0)
 	{
 		size_r = read(fd1, buff, 1024);
+		size_w = write(fd2, buff, (size_t)size_r);
 		if (size_r < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1);
 			free(buff);
 			exit(98);
 		}
-		size_w = write(fd2, buff, (size_t)size_r);
 		if (size_w < 0 || size_w < size_r)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file2);
