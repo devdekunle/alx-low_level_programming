@@ -27,7 +27,10 @@ int copy_file(char *file1, char *file2)
 	}
 	buff = malloc(1024 * sizeof(char));
 	if (buff == NULL)
+	{
+		free(buff);
 		exit(98);
+	}
 	size_r = read(fd1, buff, 1024);
 	size_w = write(fd2, buff, size_r);
 
