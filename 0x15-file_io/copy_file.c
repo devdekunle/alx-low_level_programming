@@ -22,7 +22,7 @@ int copy_file(char *file1, char *file2)
 	}
 	if (fd2 < 0)
 	{
-		dprintf(STDERR_FILENO, "Can't write to %s\n", file2);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2);
 		exit(99);
 	}
 	buff = malloc(1024 * sizeof(char));
@@ -37,7 +37,7 @@ int copy_file(char *file1, char *file2)
 	if (size_r < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1);
-		free(buff);
+
 		exit(98);	
 	}
 	if (size_w < 0 || size_w < size_r)
@@ -65,17 +65,17 @@ int copy_file(char *file1, char *file2)
 	}
 	if (close(fd1) < 0)
 	{
-		dprintf(STDERR_FILENO, "Can't close fd %d\n", fd1);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
 		exit(100);
 	}
 	close(fd1);
 	free(buff);
 	if (close(fd2) < 0)
 	{
-		dprintf(STDERR_FILENO, "Can't close fd %d\n", fd2);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 		exit(100);
 	}
-	close (fd2);
+	close(fd2);
 	return (0);
 }
 
