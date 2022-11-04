@@ -17,7 +17,7 @@ int copy_file(char *file1, char *file2)
 	fd2 = open(file2, O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, 00664);
 	if (fd1 < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1);
+		dprintf(1, "Error: Can't read from file %s\n", file1);
 		exit(98);
 	}
 	if (fd2 < 0)
@@ -61,6 +61,7 @@ int copy_file(char *file1, char *file2)
 			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file2);
 			free(buff);
 			exit(99);
+
 		}
 	}
 	if (close(fd1) < 0)
