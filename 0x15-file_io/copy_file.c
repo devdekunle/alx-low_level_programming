@@ -42,7 +42,7 @@ int copy_file(char *file1, char *file2)
 	}
 	if (size_w < 0 || size_w < size_r)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file2);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2);
 		free(buff);
 		exit(99);
 	}
@@ -58,7 +58,7 @@ int copy_file(char *file1, char *file2)
 		}
 		if (size_w < 0 || size_w < size_r)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file2);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2);
 			free(buff);
 			exit(99);
 
