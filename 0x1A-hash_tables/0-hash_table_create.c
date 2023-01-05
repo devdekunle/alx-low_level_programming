@@ -11,8 +11,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	if (isdigit((char)size) == '0')
 		return (NULL);
-	if (size == '\0')
-		return NULL;
 	ptr_table = malloc(sizeof(hash_table_t));
 	if (ptr_table == NULL)
 	{
