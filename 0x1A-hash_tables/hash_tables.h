@@ -10,14 +10,14 @@
 *
 *@key: The key, string
 *The key is unique to the HashTable
-*@: The value corresponding to a key
-*#next: a pointer to the next node of the list
+*@value: The value corresponding to a key
+*@next: a pointer to the next node of the list
 */
 typedef struct hash_node_s
 {
-    char *key;
-    char *value;
-    struct hash_node_s *next;
+	char *key;
+	char *value;
+	struct hash_node_s *next;
 } hash_node_t;
 
 /**
@@ -26,12 +26,12 @@ typedef struct hash_node_s
 *@size: The size of the array
 *@array: An array of of size @size
 * Each cell of this array is a pointer to the first nod of a linked list,
-because we eant out HasjTable to use a Chaining collision handling
+*because we eant out HasjTable to use a Chaining collision handling
 */
-typedef struct hast_table_s
+typedef struct hash_table_s
 {
-    unsigned long int size;
-    hash_node_t **array;
+	unsigned long int size;
+	hash_node_t **array;
 
 } hash_table_t;
 
