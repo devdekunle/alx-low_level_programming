@@ -14,7 +14,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	ptr_table = malloc(sizeof(hash_table_t));
 	if (ptr_table == NULL)
 	{
-		free(ptr_table)
+		free(ptr_table);
 		return (NULL);
 	}
 	ptr_table->size = size;
@@ -23,7 +23,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	if (ptr_table->array == NULL)
 	{
-		free(ptr_table->array)
+		free(ptr_table->array);
 		return (NULL);
 	}
 	/*assign each pointer in the array of pointers to NULL*/
