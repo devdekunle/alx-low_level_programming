@@ -12,7 +12,7 @@ hash_node_t *create_node(const char *key, const char *value)
 
 	ptr_node = malloc(sizeof(hash_node_t));
 	if (ptr_node == NULL)
-	
+
 		return (NULL);
 
 
