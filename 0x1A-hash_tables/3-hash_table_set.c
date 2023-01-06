@@ -20,22 +20,11 @@ hash_node_t* create_node(const char *key, const char *value)
 	
 	}
 		
-		/*assign memory for struct members*/
-	ptr_node->key = malloc(sizeof(char) * (strlen(key) + 1));
-	if (ptr_node->key == NULL)
-	{	free(ptr_node->key);
-		return (NULL);
-	}
-	ptr_node->value = malloc(sizeof(char) * (strlen(value) + 1));
-	if (ptr_node->value == NULL)
-	{
-		free(ptr_node->value);
-		return (NULL);
-	}
+		
 
 		/*duplicate argument pointer to struct members*/
-	ptr_node->key = strcpy(ptr_node->key, key);
-	ptr_node->value = strcpy(ptr_node->value, value);
+	ptr_node->key = strdup(key);
+	ptr_node->value = strdup(value);
 
 	ptr_node->next = NULL;
 
@@ -81,7 +70,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (strcmp(node->key, key) == 0)
 		{	
 			free(node->value);
-			node->value = strcpy(node->value, value);
+			node->value = strdup(value);
 			return (1);
 		} 
 		node = node->next;
