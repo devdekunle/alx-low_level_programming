@@ -52,42 +52,46 @@ hash_node_t* create_node(const char *key, const char *value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	hash_node_t *ptr_node, *ptr_index = NULL;
+	hash_node_t *node = NULL; 
+	hash_node_t *new_node = NULL;
 
- 
-	/*create a node and assign a pointer to newly created node*/
-	ptr_node = create_node(key, value);
-	if (ptr_node == NULL)
+ 	if (ht == NULL || *key == '\n' || *value == '\n')
 		return (0);
-	/* get index from hash function to determine index to insert
-		node in hash table		
-	*/
+
 
 	index = key_index((const unsigned char*)key, ht->size);
 
 	/*assign pointer at index to another pointer*/
-	ptr_index = ht->array[index];
-	/*if ptr_index is null, key does not exist*/
-	if (ptr_index == NULL)
+	node = ht->array[index];
+	if (node == NULL)
 	{
 		/*pointer at index should point to new node*/
-		ptr_index = ptr_node;
-
+		new_node = create_node(key, value);
+		if (new_node == NULL)
+			return (0);
+		
+		ht->array[index] = new_node;
+		return (1);
 		
 	}
 		/*if key already exists, we update only the value*/
-	else if (strcmp(ptr_node->key, key) == 0)
-	{
-			strcpy(ptr_index->value, value);
+	while (node != NULL)
+	{	
+		if (strcmp(node->key, key) == 0)
+		{	
+			free(node->value);
+			strcpy(node->value, value);
 			return (1);
-
+		} 
+		node = node->next;
 	}
-	else 
-	{
-		ptr_node->next = ptr_index;
-		ptr_index->next = NULL;
-
-	}
+	/*creat a new node if key does not exist*/
+	new_node = create_node(key, value);
+	if (new_node == NULL)
+		return (0);
+	/* handle collision and add node at the beginning of list*/
+	new_node->next = ht->array[index];
+	ht->array[index] = new_node;
 
 	return (1);
 }
