@@ -8,14 +8,13 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	unsigned long int i;
 	hash_table_t *ptr_table = NULL;
-
-
+	
+	if (size == '\0')
+		return (NULL);
+dd
 	ptr_table = malloc(sizeof(hash_table_t));
 	if (ptr_table == NULL)
-	{
-		free(ptr_table);
 		return (NULL);
-	}
 	ptr_table->size = size;
 	/*allocate memory for pointer to hash_node pointers*/
 	ptr_table->array = malloc(sizeof(hash_node_t) * size);
