@@ -51,6 +51,7 @@ hash_node_t* create_node(const char *key, const char *value)
 */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
+
 	unsigned long int index;
 	hash_node_t *node = NULL; 
 	hash_node_t *new_node = NULL;
@@ -80,7 +81,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (strcmp(node->key, key) == 0)
 		{	
 			free(node->value);
-			strcpy(node->value, value);
+			node->value = strcpy(node->value, value);
 			return (1);
 		} 
 		node = node->next;
