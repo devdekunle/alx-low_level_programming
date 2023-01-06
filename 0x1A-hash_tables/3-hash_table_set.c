@@ -12,15 +12,12 @@ hash_node_t *create_node(const char *key, const char *value)
 
 	ptr_node = malloc(sizeof(hash_node_t));
 	if (ptr_node == NULL)
-	{
-		free(ptr_node);
+	
 		return (NULL);
 
-	}
 
 
-
-		/*duplicate argument pointer to struct members*/
+	/*duplicate argument pointer to struct members*/
 	ptr_node->key = strdup(key);
 	ptr_node->value = strdup(value);
 

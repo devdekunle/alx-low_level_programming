@@ -9,21 +9,19 @@ hash_table_t *hash_table_create(unsigned long int size)
 	unsigned long int i;
 	hash_table_t *ptr_table = NULL;
 
-	if (isdigit((char)size) == 48 || (int)size < 48)
-		return (NULL);
 	ptr_table = malloc(sizeof(hash_table_t));
 	if (ptr_table == NULL)
 	{
-		free(ptr_table);
+	
 		return (NULL);
 	}
 	ptr_table->size = size;
 	/*allocate memory for pointer to hash_node pointers*/
-	ptr_table->array = malloc(sizeof(hash_node_t) * ptr_table->size);
+	ptr_table->array = malloc(sizeof(hash_node_t) * size);
 
 	if (ptr_table->array == NULL)
 	{
-		free(ptr_table->array);
+		free(ptr_table);
 		return (NULL);
 	}
 	/*assign each pointer in the array of pointers to NULL*/
