@@ -85,6 +85,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	else 
 	{
 		ptr_node->next = ptr_index;
+		ptr_index->next = NULL;
 
 	}
 
