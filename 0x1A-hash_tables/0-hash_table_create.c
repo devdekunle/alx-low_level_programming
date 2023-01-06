@@ -8,8 +8,8 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	unsigned long int i;
 	hash_table_t *ptr_table = NULL;
-	
-	if (size == '\0')
+
+	if (size == 0)
 		return (NULL);
 	ptr_table = malloc(sizeof(hash_table_t));
 	if (ptr_table == NULL)
