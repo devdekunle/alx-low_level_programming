@@ -15,6 +15,7 @@ int binary_search(int *array, size_t size, int value)
 
 	if (value == '\0' || array == NULL)
 		return (-1);
+	/*set first and last index of array*/
 	low = 0;
 	high = size - 1;
 
